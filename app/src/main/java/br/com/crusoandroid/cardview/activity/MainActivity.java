@@ -16,7 +16,7 @@ import br.com.crusoandroid.cardview.model.Postagem;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerPostagem;
-    private List<Postagem> postagens = new ArrayList<>();
+    private List<Postagem> postagens = new ArrayList<>(); // array que armazena o banco de dados
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerPostagem.setLayoutManager(layoutManager);
         //definir adapter
-        prepararPostagens();
+        prepararPostagens(); // metodo que funciona como  um "banco de dados"
 
         PostagemAdapter adapter = new PostagemAdapter(postagens);
         recyclerPostagem.setAdapter( adapter);
